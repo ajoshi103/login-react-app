@@ -11,9 +11,35 @@ export const Sign = (props) => {
     e.preventDefault();
     const validationErrors = {};
 
+<<<<<<< HEAD
     // Validate name
     if (!name) {
       validationErrors.name = "Full name is required";
+=======
+        // Validate email
+        if (!email) {
+            validationErrors.email = "Email is required";
+        } else if (!/\S+@\S+\.\S+/.test(email)) {
+            validationErrors.email = "Email address is invalid";
+        }
+
+        // Validate password
+        if (!pass) {
+            validationErrors.password = "Password is required";
+        } else if (pass.length < 6) {
+            validationErrors.password = "Password must be at least 6 characters long";
+        }
+
+        if (Object.keys(validationErrors).length > 0) {
+            setErrors(validationErrors);
+        } else {
+            
+            console.log(email);
+            console.log(user is registered);
+          
+            setErrors({}); // Clear errors
+        }
+>>>>>>> faffe11583d72ac610b6da82b13c38d5908b1049
     }
 
     // Validate email
