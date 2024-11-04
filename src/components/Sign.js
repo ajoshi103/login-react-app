@@ -32,8 +32,9 @@ export const Sign = (props) => {
         if (Object.keys(validationErrors).length > 0) {
             setErrors(validationErrors);
         } else {
-            alert("user is registered");
+            
             console.log(email);
+            console.log(user is registered);
           
             setErrors({}); // Clear errors
         }
